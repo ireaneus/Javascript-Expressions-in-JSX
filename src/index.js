@@ -14,14 +14,26 @@ const dnum = {
   7: "Complete"
 };
 const num = Math.floor(Math.random() * 7) + 1;
-
 const number = `${num}: ${dnum[num]}`;
+const img = "https://picsum.photos/200";
+
+const para = {
+  color: "teal",
+  border: "1px solid brown",
+  padding: "10px"
+};
+para.color = "darkgreen";
 
 ReactDOM.render(
   <div>
-    <h1>{`${name} of ${location}`}</h1>
-    <p>Pastor Jack Hurley teached on {sermon} on Feb 12th 1987</p>
+    <h1
+      className="heading"
+      contentEditable="true"
+      spellCheck="false"
+    >{`${name} of ${location}`}</h1>
+    <p style={para}>Pastor Jack Hurley teached on {sermon} on Feb 12th 1987</p>
     <p>The numbers in scripture have meaning {number}</p>
+    <img alt="random picsum" src={img} />
   </div>,
   document.getElementById("root")
 );
